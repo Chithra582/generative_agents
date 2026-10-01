@@ -1,0 +1,20 @@
+name: "spatial-perceptual-radar"
+description: "Scans surrounding grid coordinates for nearby agents, spatial objects, and environmental changes."
+input_schema:
+  type: object
+  properties:
+    agent_name:
+      type: string
+      description: "Identifier of the observing agent."
+    coordinates:
+      type: array
+      items:
+        type: integer
+      description: "[x, y] grid coordinates of the agent."
+    vision_radius:
+      type: integer
+      description: "Perceptual tile radius."
+      default: 5
+  required:
+    - agent_name
+    - coordinates

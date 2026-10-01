@@ -1,0 +1,17 @@
+name: "reflection-generator"
+description: "Synthesizes higher-order insights, hypotheses, and personality beliefs from recent memory clusters."
+input_schema:
+  type: object
+  properties:
+    agent_name:
+      type: string
+      description: "Identifier of the target agent."
+    trigger_threshold:
+      type: integer
+      description: "Cumulative importance threshold required to trigger reflection."
+      default: 100
+    focus_topic:
+      type: string
+      description: "Optional focal subject or question for the reflection query."
+  required:
+    - agent_name

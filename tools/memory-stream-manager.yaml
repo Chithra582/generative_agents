@@ -1,0 +1,26 @@
+name: "memory-stream-manager"
+description: "Queries and updates the agent associative memory stream with importance-weighted observations."
+input_schema:
+  type: object
+  properties:
+    agent_name:
+      type: string
+      description: "Identifier of the target agent."
+    action:
+      type: string
+      description: "Memory operation to perform."
+      enum: ["insert_observation", "retrieve_relevant", "get_recent", "summarize"]
+    content:
+      type: string
+      description: "Memory text to insert or search query."
+    importance_score:
+      type: number
+      description: "Assigned importance rating (1-10) for inserted memories."
+      default: 1.0
+    top_k:
+      type: integer
+      description: "Number of relevant memory nodes to retrieve."
+      default: 5
+  required:
+    - agent_name
+    - action

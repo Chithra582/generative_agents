@@ -1,0 +1,19 @@
+name: "simulation-step-clock"
+description: "Coordinates multi-agent discrete time ticks, movement updates, and spatial collision checks."
+input_schema:
+  type: object
+  properties:
+    simulation_id:
+      type: string
+      description: "Active simulation instance name."
+    action:
+      type: string
+      description: "Simulation clock action."
+      enum: ["step", "pause", "resume", "status", "get_time"]
+    step_duration_seconds:
+      type: integer
+      description: "Virtual seconds elapsed per tick."
+      default: 10
+  required:
+    - simulation_id
+    - action

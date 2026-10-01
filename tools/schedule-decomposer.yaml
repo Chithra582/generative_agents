@@ -1,0 +1,22 @@
+name: "schedule-decomposer"
+description: "Decomposes daily agent agendas into discrete 5-to-15 minute action steps and location destinations."
+input_schema:
+  type: object
+  properties:
+    agent_name:
+      type: string
+      description: "Identifier of the target agent."
+    current_time:
+      type: string
+      description: "Current simulation time (e.g., '08:30:00')."
+    daily_plan:
+      type: string
+      description: "High-level daily agenda string."
+    granularity_minutes:
+      type: integer
+      description: "Time resolution for decomposed steps."
+      enum: [5, 10, 15, 30, 60]
+      default: 15
+  required:
+    - agent_name
+    - current_time

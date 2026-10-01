@@ -1,0 +1,22 @@
+spec_version: "0.1.0"
+name: "generative-agents"
+version: "1.0.0"
+description: "Computational cognitive architecture for simulating believable human behavior in interactive sandbox environments."
+author: "Joon Sung Park & Stanford University / OpenGAP Contributors"
+license: "Apache-2.0"
+metadata:
+  domain: "Developer Tools / Social Simulation & Cognitive Architecture"
+  category: "Developer Tools"
+  framework: "Generative Agents Cognitive Framework & Django/Python"
+  language: "Python, JavaScript"
+skills:
+  - "memory-stream-retrieval"
+  - "reflection-synthesis-engine"
+  - "recursive-planning-decomposition"
+  - "perceptual-dialogue-orchestration"
+tools:
+  - "memory-stream-manager"
+  - "reflection-generator"
+  - "schedule-decomposer"
+  - "spatial-perceptual-radar"
+  - "simulation-step-clock"
